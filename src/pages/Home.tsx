@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Shield, CheckCircle, Users, Zap } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { motion } from 'framer-motion';
 import SearchBar from '../components/SearchBar';
 import PropertyCard from '../components/PropertyCard';
 
@@ -118,38 +117,20 @@ const Home: React.FC = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Trust Home
-          </motion.h1>
+          </h1>
           
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl font-light mb-4"
-          >
+          <p className="text-xl md:text-2xl font-light mb-4">
             {t('heroTitle')}
-          </motion.p>
+          </p>
           
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-gray-200 mb-12"
-          >
+          <p className="text-lg text-gray-200 mb-12">
             {t('heroSubtitle')}
-          </motion.p>
+          </p>
 
           {/* Hero Form */}
-          <motion.form
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <form
             onSubmit={handleHeroSubmit}
             className="flex flex-col sm:flex-row gap-4 justify-center max-w-4xl mx-auto"
           >
@@ -180,7 +161,7 @@ const Home: React.FC = () => {
             >
               {t('submit')}
             </button>
-          </motion.form>
+          </form>
         </div>
       </section>
 
