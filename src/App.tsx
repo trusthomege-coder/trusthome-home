@@ -15,10 +15,10 @@ import AdminPanel from './components/AdminPanel';
 
 function App() {
   return (
-    <AuthProvider>
-      <LanguageProvider>
-        <Router>
-          <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
+      <AuthProvider>
+        <LanguageProvider>
+          <Router>
             <Header />
             <main>
               <Routes>
@@ -33,10 +33,10 @@ function App() {
               </Routes>
             </main>
             <Footer />
-          </div>
-        </Router>
-      </LanguageProvider>
-    </AuthProvider>
+          </Router>
+        </LanguageProvider>
+      </AuthProvider>
+    </div>
   );
 }
 
